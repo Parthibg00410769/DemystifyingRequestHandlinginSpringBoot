@@ -16,10 +16,13 @@ public class RequestController {
 
     }
 
-    @GetMapping("/details/{name}/{age}")
-    public String details(@RequestParam String name, int age){
+    @GetMapping("/details")
+    public String details(@RequestParam String name,
+                          @RequestParam int age){
         return name + "has just turned" + age;
     }
+
+
 
 
 }
